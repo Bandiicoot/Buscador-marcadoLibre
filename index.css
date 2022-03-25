@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0%;
+  background-color: rgb(54, 151, 235);
+  padding: 0%;
+}
+header {
+  height: 70px;
+  width: 100%;
+  background-color: rgb(65, 21, 185);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.contenedor-de-search {
+  height: 90%;
+  width: 1550px;
+}
+.buscador {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 53px;
+  transition: 1s linear;
+  overflow: hidden;
+}
+.input-buscador {
+  display: block;
+  appearance: none;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  background-color: #24233a;
+  padding: 15px;
+  color: #24233a;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.4s linear;
+}
+
+.input-buscador::placeholder {
+  color: #24233a;
+}
+.icono-search {
+  position: absolute;
+  right: calc(53px / 2);
+  top: 50%;
+  transform: translate(50%, -50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+.icono-search path {
+  fill: #00f494;
+  transition: 0.4s linear;
+}
+.buscador:focus-within {
+  max-width: 1450px;
+}
+
+.buscador:focus-within .input-buscador {
+  background-color: #fff;
+  padding-right: 50px;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+.buscador:focus-within .icono-search path {
+  fill: #242334;
+}
+
+h2 {
+  font-family: "Roboto";
+  margin-left: 27%;
+  width: 900px;
+  display: flex;
+}
+
+.contenedor-de-producto {
+  height: 200px;
+  width: 900px;
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background-color: aliceblue;
+  border: solid #24233a;
+  padding: 20px;
+  border-radius: 15px;
+  animation: upIn 2.2s linear forwards;
+  animation-delay: calc(0.5s * var(--i));
+  transition: all 300ms;
+}
+.reenvio {
+  color: black;
+  text-decoration: none;
+}
+.contenedor-de-producto:hover {
+  box-shadow: 0px 0px 10px;
+  height: 250px;
+  width: 930px;
+  transform: scale(1.15);
+}
+.imagen-de-producto {
+  max-height: 100%;
+  max-width: 120px;
+  min-width: 120px;
+  transition: 400ms;
+}
+.imagen-de-producto:hover {
+  transform: scale(1.4);
+
+  filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.5));
+}
+.strings {
+  height: 100%;
+  width: 46%;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.name {
+  font-family: "Roboto";
+  margin-bottom: 0px;
+  margin-left: 0%;
+}
+.estado {
+  font-family: "roboto";
+  font-size: 20px;
+}
+.c-ventas {
+  font-family: "Roboto";
+  font-size: 20px;
+}
+
+.contenedor-precio {
+  font-family: "Roboto";
+  font-size: 40px;
+  margin-left: 0px;
+  padding-left: 10%;
+}
+
+@keyframes upIn {
+  0% {
+    transform: translateY(-100vw);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
